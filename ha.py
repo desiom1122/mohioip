@@ -64,7 +64,7 @@ if not document:
             return
 
         # Update the MongoDB document
-        collection.update_one(
+    collection.update_one(
             {"_id": document["_id"]},
             {"$set": {"ip": user_ip}},
         )

@@ -59,8 +59,7 @@ def update_document(update: Updater, context: CallbackContext) -> None:
 
         # Find the document with the specified username and user ID
 document = collection.find_one({"username": username_to_update})
-
-        if not document:
+if not document:
             update.message.reply_text(f'No document found with the username "{username_to_update}" for your user ID.')
             return
 
